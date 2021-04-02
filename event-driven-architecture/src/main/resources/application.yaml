@@ -1,0 +1,11 @@
+
+server:
+  port: 9090
+
+# Queue facility connection
+spring:
+  rabbitmq:
+    host: ${RABBITMQ_HOST}
+    port: ${RABBITMQ_PORT}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
