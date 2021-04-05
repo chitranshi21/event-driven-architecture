@@ -11,9 +11,7 @@ import java.io.UnsupportedEncodingException;
 @Slf4j
 public class MessageConsumer {
 
-    private final String QUEUE_NAME="test_queue";
-
-    @RabbitListener(queues = QUEUE_NAME)
+    @RabbitListener(queues = "${broker.queue-name}")
     public void consumeMessage(Message message) throws UnsupportedEncodingException {
         log.info(String.format("The message recieved %s", new String(message.getBody(), "UTF-8")));
     }
